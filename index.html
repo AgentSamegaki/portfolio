@@ -36,11 +36,6 @@
                 <a href="https://www.facebook.com/JuanitoAfonso"><i class='bx bxl-facebook-circle'></i></a>
                 <a href="https://discord.com/invite/JdS7stFd"><i class='bx bxl-discord-alt'></i></a>
             </div>
-      
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
-            </div>
         </div>
 
             <div class="home-img">
@@ -183,7 +178,7 @@
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function() {
-    emailjs.init("tztS8EMhH-jTypX7j"); //  Your actual public key
+    emailjs.init("tztS8EMhH-jTypX7j"); 
   })();
 
   document.getElementById('contact-form').addEventListener('submit', function(e) {
@@ -192,7 +187,7 @@
     emailjs.sendForm('service_3z9pkw8', 'template_5k0p5r8', this)
       .then(function(response) {
         alert("Message sent successfully!");
-        document.getElementById("contact-form").reset(); // clear form
+        document.getElementById("contact-form").reset();
       }, function(error) {
         console.error('Message failed:', error);
         alert("Something went wrong. Please try again.");

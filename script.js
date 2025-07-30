@@ -7,7 +7,7 @@ const roles = [
 ];
 
 let currentRole = 0;
-let charIndex = 0;
+let charIndex =   0;
 let isDeleting = true;
 const span = document.querySelector(".text-animation span");
 
