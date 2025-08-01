@@ -8,16 +8,17 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
+
 :root {
     --bg-color: #080808;
     --secondary-color: #131313;
     --text-color: white;
     --main-color: #00ffee;
 }
-
+/* overflow-x is used to prevent horizontal scrolling */
 html {
     font-size: 60%;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 body {
     background-color: var(--bg-color);
@@ -40,15 +41,9 @@ body {
     font-size: 2.8rem;
     font-weight: 500;
     color: var(--text-color);
-    cursor: pointer;
     transition: 0.3s ease;
 }
-.logo:hover {
-    transform: scale(1.1);
-}
-.logo span {
-    text-shadow: 0 0 25px var(--main-color);
-}
+
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
@@ -57,8 +52,7 @@ body {
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-.navbar a:hover,
-.navbar a:active {
+.navbar a:hover{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
@@ -71,7 +65,7 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 12% 10rem;
-}
+}   
 .home {
     display: flex;
     justify-content: center;
@@ -86,26 +80,18 @@ section {
     justify-content: center;
     margin-top: 3rem;
 }
-span {
-    color: var(--main-color);
-}
-.logo span {
-    color: var(--main-color)
-}
-.home-content h3 {
-    font-size: 3.5rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
+
 .home-content h1 {
     font-size: 7rem;
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
-}
+}   
+/* inner image */
 .home-img {
     border-radius: 50%;
 }   
+/* outer image */
 .home-img img {
     position: relative;
     top: 3rem;
@@ -139,20 +125,6 @@ span {
     color: var(--main-color);
 }
 
-
-.btn{
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: black;
-    border: 2px solid transparent;
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-}
-
 .heading {
     font-size: 8rem;
     text-align: center;
@@ -172,6 +144,7 @@ span {
     flex-wrap: wrap;
     position: relative;
 }
+/* this creates a vertical line it needs a before to showup */
 .timeline-items::before {
     content: '';
     position: absolute;
@@ -199,8 +172,6 @@ span {
     height: 21px;
     width: 21px;
     background-color: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color);
     position: absolute;
     left: calc(50% - 8px);
     border-radius: 50%;
@@ -218,11 +189,8 @@ span {
     padding: 30px 50px;
     border-radius: 4rem;
     box-shadow: 0 0 10px var(--main-color);
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
-}
 .timeline-content h3 {
     font-size: 20px;
     color: white;
@@ -254,6 +222,8 @@ span {
     margin-bottom: 5rem;
     color: white;
 }
+/* makes the layout more responsive and adaptive */
+/* a wrapper around multiple container or box */
 .experiences-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -264,11 +234,10 @@ span {
     height: 300px;
     border-radius: 3rem;
     border: 5px solid transparent;
-    cursor: pointer;
     transition: 0.4s ease-in-out;
     padding: 2rem;
 }
-
+/* combining the two to merge together the css */
 .experience-box .experience-info {
     display: flex;
     flex-direction: column;
@@ -309,7 +278,6 @@ span {
     border-radius: 2rem;
     box-shadow: 0 0 15px var(--main-color);
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
 }
 
 .project-card img {
@@ -354,6 +322,7 @@ span {
     justify-content: center;
     flex-wrap: wrap;
 }
+/* instead of separating the two, i just combined it for cleaner code*/
 .contact-form .input-box input,
 .contact-form .input-box textarea {
     width: 100%;
