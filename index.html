@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>      
-    
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
     <header class="header">
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=jrjtXDztHdzbPHLjqWXrHwtcSfDnVxLtCspBhwWfRRFdkmDCsPCtFKHmbdtCPgNjGTxWTbCV" class="logo">James Manucan</a>
+      <a
+        href="mailto:manucanjames@gmail.com"
+        class="logo"
+        >@JDM</a
+      >
 
-        <i class="bxgit bx-menu" id="menu-icon"></i>
+      <i class="bx bx-menu" id="menu-icon"></i>
 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#education">Education</a>
-            <a href="#experiences">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <img src="img/moon.png" id="icon">
     </header>
 
     <section class="home" id="home">
-        <div class="home-content">
+      <div class="home-img">
+        <img src="img/logo.png" alt="Logo" />
+      </div>
+
+      <div class="home-content">
             <h1>Hello, I'm James</h1>
             <p> I create and develop things for Fun, focusing on innovative solutions that bring ideas to life.</p>
             </p>
 
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/james-manucan-069344356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/AgentSamegaki"><i class='bx bxl-github'></i></a>
-                <a href="https://www.facebook.com/JuanitoAfonso"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="https://discord.com/invite/JdS7stFd"><i class='bx bxl-discord-alt'></i></a>
+                <a href="https://www.linkedin.com/in/james-manucan-069344356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/AgentSamegaki" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.facebook.com/JuanitoAfonso" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://discord.com/invite/JdS7stFd" target="_blank"><i class='bx bxl-discord-alt'></i></a>
             </div>
         </div>
-
-            <div class="home-img">
-                <img src="img/image.png">
-            </div>
     </section>
 
-    
     <section class="education" id="education">
         <h2 class="heading">Education</h2>
 
@@ -77,7 +85,6 @@
             </div>
         </div>
     </section>
-
 
     <section class="experiences" id="experiences">
         <h2 class="heading">Experience</h2>
@@ -118,7 +125,7 @@
     </section>
 
 
-    <section id="projects" class="projects">
+     <section id="projects" class="projects">
         <h2 class="heading">My Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
@@ -128,6 +135,7 @@
         <p>A first-person zombie survival game set in a post-apocalyptic version of the UPANG campus. Inspired by *The Last of Us*, the game delivers an immersive experience by faithfully recreating real school locations, 
             blending familiarity with horror. With high-quality graphics, engaging gameplay, and atmospheric tension, it captures players’ attention while showcasing technical and creative game development skills.</p>
                         </div>
+                    
                     </div>
 
         <div class="project-card">
@@ -160,7 +168,6 @@
         </div>
     </section>
 
-
     <section class="contact" id="contact">
   <h2 class="heading">Contact <span>Me</span></h2>
 
@@ -169,7 +176,7 @@
       <input type="text" name="name" placeholder="Full Name" required>
       <input type="email" name="email" placeholder="Email" required>
       <input type="text" name="phone" placeholder="Phone Number">
-      <input type="text" name="title" placeholder="Subject" required>
+      <input type=" text" name="title" placeholder="Subject" required>
     </div>
     <div class="input-box">
       <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
@@ -179,25 +186,6 @@
     </section>
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function() {
-    emailjs.init("tztS8EMhH-jTypX7j"); 
-  })();
-
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm('service_3z9pkw8', 'template_5k0p5r8', this)
-      .then(function(response) {
-        alert("Message sent successfully!");
-        document.getElementById("contact-form").reset();
-      }, function(error) {
-        console.error('Message failed:', error);
-        alert("Something went wrong. Please try again.");
-      });
-  });
-</script>
-
 
     <footer class="footer"> 
         <div class="social-icons">
@@ -212,5 +200,10 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
+
+  </body>
 </html>
+
+<!-- NOTE TO MYSELF: ALWAYS PUT SOME DESCRIPTION AND INSTRUCTION AFTER YOU FINISH CODING
+ SO THAT YOU CAN ALWAYS RE-VISIT YOUR PROJECT AND STILL UNDERSTAND OR IMPROVE ITS FUNCTIONALITY -->
+<!-- YOU CANT ALWAYS REMEMBER EVERYTHING SO WRITE IT DOWN AND REVIEW IT AGAIN ONCE IN A WHILE -->
