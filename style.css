@@ -78,7 +78,7 @@ body {
 /* burger */
 #menu-icon {
   font-size: 3.6rem;
-  color: var(--main-color);
+  color: var(--text-color);
   display: none;
 }
 
@@ -113,6 +113,7 @@ section {
 /* inner image */
 .home-img {
   border-radius: 50%;
+  display: block;
 }
 /* outer image */
 .home-img img {
@@ -502,5 +503,19 @@ section {
   }
   .experiences-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  #menu-icon {
+    order: 2;
+  }
+
+  .icon {
+    order: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-img {
+    display: none;
   }
 }
