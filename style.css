@@ -54,7 +54,8 @@ body {
 /* this is the icon for the moon */
 #icon {
   width: 3.5rem;
-  height: 3.5 rem;
+  height: 3.5rem;
+  cursor: pointer;
 }
 
 .navbar {
@@ -297,6 +298,9 @@ section {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+}
+.project-card-link {
+  color: var(--text-color);
 }
 .project-card {
   display: flex;
