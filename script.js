@@ -9,6 +9,7 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
+// initializing the emailjs with my userid
 (function () {
   emailjs.init("tztS8EMhH-jTypX7j");
 })();

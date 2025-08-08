@@ -57,12 +57,12 @@ body {
   height: 3.5rem;
   cursor: pointer;
 }
-
+/* NAVBAR PROPERTIES: I USED FLEX DISPLAY SO THAT I CAN CONTROL THE CHILD ELEMENTS OF THE NAVBAR AND SINCE THE DEFAULT OF FLEX IS HORIZONTAL I DIDNT CHANGE ITS DIRECTION */
 .navbar {
   display: flex;
   align-items: center;
 }
-
+/* NAVBAR CONTENTS */
 .navbar a {
   font-size: 1.8rem;
   color: var(--text-color);
@@ -75,26 +75,27 @@ body {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
-/* burger */
+/* BURGER MENU */
 #menu-icon {
   font-size: 3.6rem;
   color: var(--text-color);
   display: none;
 }
-
+/* SECTION LAYOUT FOR FLEXIBILITY */
 section {
   min-height: 100vh;
   padding: 10rem 12% 10rem;
 }
 
 /* LANDING PAGE */
+/* I USED FLEX BECAUSE IT HELPS ME ARRANGE ITEMS AS EASY AS POSSIBLE IT AUTOMATICALLY ADJUST THEIR LAYOUT DEPENDING ON HOW MUCH SPACE IS AVAILABLE */
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15rem;
 }
-/* the introduction tagline and the social media icons */
+/* THE INTRODUCTION TAGLINES AND THE ICONS THAT I USED */
 .home-content {
   display: flex;
   flex-direction: column;
@@ -113,7 +114,6 @@ section {
 /* inner image */
 .home-img {
   border-radius: 50%;
-  display: block;
 }
 /* outer image */
 .home-img img {
@@ -162,6 +162,7 @@ section {
 .education h2 {
   margin-bottom: 5rem;
 }
+/* THE DESIGN FOR MY EDUCATION SECTION */
 .timeline-items {
   max-width: 1200px;
   margin: auto;
@@ -170,6 +171,8 @@ section {
   position: relative;
 }
 /* this creates a vertical line it needs a before to showup */
+/* ii want the pseudo element to be a line, i dont want it to be a text thats why its empty so that i can style it freely later on */
+/* i want to inject a content to appear before the real content */
 .timeline-items::before {
   content: "";
   position: absolute;
@@ -178,6 +181,7 @@ section {
   height: 100%;
   background-color: var(--text-color);
 }
+/* TAKES UP THE FULL WIDTH OF THE PARENT CONTAINER  */
 .timeline-item {
   width: 100%;
   position: relative;
@@ -253,7 +257,7 @@ section {
 /* a wrapper around multiple container or box */
 .experiences-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 2.5rem;
 }
 .experience-box {
@@ -261,10 +265,9 @@ section {
   height: 300px;
   border-radius: 3rem;
   border: 5px solid transparent;
-  transition: 0.4s ease-in-out;
   padding: 2rem;
 }
-/* combining the two to merge together the css */
+/* basically does nothing it wont change the layout because the layout that ive already given to the other element is already like the default of this, but still fine and will come in handy later on if i want to add another element in experiences */
 .experience-box .experience-info {
   display: flex;
   flex-direction: column;
@@ -359,8 +362,9 @@ section {
   flex-wrap: wrap;
 }
 /* instead of separating the two, i just combined it for cleaner code*/
-.contact-form .input-box input,
-.contact-form .input-box textarea {
+/*  */
+.contact-form .input-box input, /*  inline level only has a single height */
+.contact-form .input-box textarea /* MULTI LINE INPUT*/ {
   width: 100%;
   padding: 2.5rem;
   font-size: 1.8rem;
