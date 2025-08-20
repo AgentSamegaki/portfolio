@@ -1,7 +1,8 @@
-//js for the hamburger
+//JS FOR THE HAMBURGER
+// IT ONLY EXISTS BETWEEN THE BLOCK OR IT CREATES A BLOCK YOU WROTE IT, IT WONT AFFECT OR ACCIDENTALLY CHANGE ANYTHING OUTSIDE OF IT, ITS BLOCK-SCOPED MAKES IT HARDER TO ACCIDENTALLY OVERWRITE VARIABLES OR CAUSE BUGS.
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
-// let sections = document.querySelectorAll('.section');
+let sections = document.querySelectorAll(".section");
 let navLinks = document.querySelectorAll("header nav a");
 
 menuIcon.onclick = () => {
@@ -9,7 +10,8 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-// initializing the emailjs with my userid
+// INITIALIZING EMAILJS WITH MY USER ID
+// KEEP VARIABLES/FUNCTIONS INSIDE IT PRIVATE SO THEY DON’T ACCIDENTALLY CONFLICT WITH OTHER CODE.
 (function () {
   emailjs.init("tztS8EMhH-jTypX7j");
 })();

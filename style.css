@@ -25,11 +25,14 @@ IN YOUR CODE AND YOU CAN RE-VISIT OR REVIEW YOUR CODE AGAIN ONCE YOU FORGET ITS 
   --main-color: #008000;
 }
 /* overflow-x is used to prevent horizontal scrolling */
+/* respecting the users preferences */
+/* root element of the browser default font size */
 html {
   font-size: 60%;
   overflow-x: hidden;
 }
 body {
+  font-family: sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -43,15 +46,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 5;
 }
-/* JDM logo */
+/* JDM LOGO */
 .logo {
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--text-color);
 }
-/* this is the icon for the moon */
+/* THIS IS MY ICON FOR THE MOON/ DARK MODE */
 #icon {
   width: 3.5rem;
   height: 3.5rem;
@@ -109,7 +111,8 @@ section {
   font-size: 7rem;
   font-weight: 700;
   margin-top: 1.5rem;
-  line-height: 1;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 /* inner image */
 .home-img {
@@ -170,11 +173,11 @@ section {
   flex-wrap: wrap;
   position: relative;
 }
-/* this creates a vertical line it needs a before to showup */
-/* ii want the pseudo element to be a line, i dont want it to be a text thats why its empty so that i can style it freely later on */
-/* i want to inject a content to appear before the real content */
+/* THIS CREATES A VERTICAL LINE IT NEEDS BEFORE TO SHOW UP */
+/* I WANT THE PSEUDO ELEMENT TO BE A LINE, I DON'T WANT IT TO BE A TEXT THAT'S WHY ITS EMPTY SO THAT I CAN STYLE IT FREELY LATER ON */
+/* I WANT TO INJECT A CONTENT TO APPEAR BEFORE THE REAL CONTENT */
 .timeline-items::before {
-  content: "";
+  content: " ";
   position: absolute;
   left: calc(50% - 1px);
   width: 5px;
@@ -253,8 +256,8 @@ section {
   margin-bottom: 5rem;
   color: var(--text-color);
 }
-/* makes the layout more responsive and adaptive */
-/* a wrapper around multiple container or box */
+/* MAKES THE LAYOUT MORE RESPONSIVE AND ADAPTIVE */
+/* A WRAPPER AROUND MULTIPLE CONTAINER OR BOX */
 .experiences-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -267,7 +270,7 @@ section {
   border: 5px solid transparent;
   padding: 2rem;
 }
-/* basically does nothing it wont change the layout because the layout that ive already given to the other element is already like the default of this, but still fine and will come in handy later on if i want to add another element in experiences */
+/* BASICALLY DOES NOTHING IT WONT CHANGE THE LAYOUT BECAUSE THE LAYOUT THAT I'VE ALREADY GIVEN TO THE OTHER ELEMENT IS ALREADY THE DEFAULT OF THIS, BUT STILL FINE AND WILL COME IN HANDY LATER ON IF I WANT TO ADD ANOTHER ELEMENT IN EXPERIENCES */
 .experience-box .experience-info {
   display: flex;
   flex-direction: column;
@@ -312,7 +315,7 @@ section {
   background: var(--bg-color);
   border: 2px solid var(--text-color);
   border-radius: 2rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .project-card img {
@@ -344,39 +347,69 @@ section {
 .contact {
   background: var(--bg-color);
 }
-.contact h2 {
-  margin-bottom: 5rem;
-  color: var(--text-color);
+.contact-content {
+  padding: 40px 60px; /* space around the whole contact section */
 }
-.contact-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin: 5rem auto;
+
+.contact h2 {
+  color: var(--text-color);
+  margin-bottom: 5rem;
+  font-size: 8rem;
   text-align: center;
 }
-.contact-form .input-box {
+
+/* Desktop layout */
+.contact-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
-/* instead of separating the two, i just combined it for cleaner code*/
-/*  */
-.contact-form .input-box input, /*  inline level only has a single height */
-.contact-form .input-box textarea /* MULTI LINE INPUT*/ {
-  width: 100%;
-  padding: 2.5rem;
-  font-size: 1.8rem;
-  color: var(--text-color);
-  background: var(--bg-color);
-  border-radius: 2rem;
-  border: 2px solid var(--text-color);
-  margin: 1.5rem 0;
-  resize: none;
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 300px;
 }
-.contact-form .btn {
-  margin-top: 2rem;
+
+/* Inputs */
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--text-color);
+  border-radius: 20px;
+  font-size: 18px;
+  color: var(--text-color);
+  padding: 30px;
+  margin-bottom: 20px; /* space between inputs */
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--text-color);
+  border-radius: 20px;
+  font-size: 18px;
+  color: var(--text-color);
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: var(--bg-color);
+  font-size: 18px;
+  color: var(--bg-main);
+  border: 2px solid var(--text-color);
 }
 
 .footer {
